@@ -20,30 +20,17 @@ TATATATATATATATATATATA (yummy microsatellite)
 
 What to do:
 
+1) Navigate to the folder where you have put both main.py and your input .txt file.
 
-1) Open the terminal and make sure you have python3. You can do this by simply typing python3 --version and it should print out something like Python 3.7 if you have it. If not, download it and follow install info online.
+2) Type in what you want in the following way:
 
+python3 trimmer.py bp_off_start bp_off_end input.txt 
 
+-- where bp_off_start is the number of base pairs you want taken off the start and bp_off_end is the number off the end. NB if these add to more than the length of your sequence, you will just end up with no sequence. -- 
 
-2) Navigate to the folder where you have put both trimmer.py and your input .txt file. Do this by typing in:
-cd /Users/hannahmacpherson/Documents/python_practice/Projects/sequence_trimmer
+So for example, if I want to take 30bp off the start and 20bp off the end of every sequence in ilovegenetics.txt, I would type the following:
 
-** NB I need to update that bit above if other people are going to use it **
-
-If you want to double check you're in the right place, type in ls and it should list everything in that folder, including those files. 
-
-
-
-
-3) Type in what you want in the following way:
-
-python3 trimmer.py bp_off_start bp_off_end input.txt output.txt
-
-So for example, if I want to take 30bp off the start and 20bp off the end of every sequence in hannahisgreat.txt, and save that to ilovedrb1.txt, I would type the following:
-
-python3 trimmer.py 30 20 hannahisgreat.txt ilovedrb1.txt
-
-NB if you want to just update the original file with the trimmed sequences, you can call the input and output the same name.
+python3 trimmer.py 30 20 ilovegenetics.txt 
 
 The script should then confirm what it's done and you should find the file in your folder.
 
