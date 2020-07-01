@@ -1,0 +1,54 @@
+Hello, this script will chop however much you want off the start and end of each of your sequences and save it to a file name of your choice.
+
+-----------------------------------------------
+
+You will need: 
+
+- a plain text .txt file as an input. This can have as many sequences as you want, but they must be in the format:
+
+> whatever descriptor you want
+GAGAGTGCAGAGATA (sequence)
+
+> descriptor for second sequence
+GAGAGTGCAGAGATAAAAAAAAAAAAAATGSGSA (tricky 14-mer there)
+
+>third descriptor
+TATATATATATATATATATATA (yummy microsatellite)
+
+** Note that you need the > in the descriptor or everything will break **
+-----------------------------------------------
+
+What to do:
+
+
+1) Open the terminal and make sure you have python3. You can do this by simply typing python3 --version and it should print out something like Python 3.7 if you have it. If not, download it and follow install info online.
+
+
+
+2) Navigate to the folder where you have put both trimmer.py and your input .txt file. Do this by typing in:
+cd /Users/hannahmacpherson/Documents/python_practice/Projects/sequence_trimmer
+
+** NB I need to update that bit above if other people are going to use it **
+
+If you want to double check you're in the right place, type in ls and it should list everything in that folder, including those files. 
+
+
+
+
+3) Type in what you want in the following way:
+
+python3 trimmer.py bp_off_start bp_off_end input.txt output.txt
+
+So for example, if I want to take 30bp off the start and 20bp off the end of every sequence in hannahisgreat.txt, and save that to ilovedrb1.txt, I would type the following:
+
+python3 trimmer.py 30 20 hannahisgreat.txt ilovedrb1.txt
+
+NB if you want to just update the original file with the trimmed sequences, you can call the input and output the same name.
+
+The script should then confirm what it's done and you should find the file in your folder.
+
+
+-----------------------------------------------
+
+Hannah 02/06/2020
+
