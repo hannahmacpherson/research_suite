@@ -10,3 +10,4 @@ if __name__ == "__main__":
             print("")
             print("You've inputted your variables wrong - make sure it's trimmer.py bp_off_start bp_off_end input_file.txt output_file.txt")
             print("")
+
