@@ -1,26 +1,16 @@
-Hello, this script will chop however much you want off the start and end of each of your sequences and save it to a file name of your choice.
+Hello, this script will chop however much you want off the start and end of each of your sequences and save them to a second file.
 
 -----------------------------------------------
 
 You will need: 
 
-- a plain text .txt file as an input. This can have as many sequences as you want, but they must be in the format:
+- a plain text .txt file as an input. This can have as many sequences as you want, but they must be in the format suggested in the example file. Each sequence must be headed by a descriptor with a '>' preceeding it.
 
-\> whatever descriptor you want
-GAGAGTGCAGAGATA (sequence)
-
-\> descriptor for second sequence
-GAGAGTGCAGAGATAAAAAAAAAAAAAATGSGSA (tricky 14-mer there)
-
-\>third descriptor
-TATATATATATATATATATATA (yummy microsatellite)
-
-** Note that you need the > in the descriptor or everything will break **
 -----------------------------------------------
 
 What to do:
 
-1) Navigate to the folder where you have put both main.py and your input .txt file.
+1) In the terminal, navigate to the folder where you have put both main.py and your input .txt file.
 
 2) Type in what you want in the following way:
 
