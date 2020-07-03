@@ -6,13 +6,13 @@ You will need:
 
 - a plain text .txt file as an input. This can have as many sequences as you want, but they must be in the format:
 
-> whatever descriptor you want
+\> whatever descriptor you want
 GAGAGTGCAGAGATA (sequence)
 
-> descriptor for second sequence
+\> descriptor for second sequence
 GAGAGTGCAGAGATAAAAAAAAAAAAAATGSGSA (tricky 14-mer there)
 
->third descriptor
+\>third descriptor
 TATATATATATATATATATATA (yummy microsatellite)
 
 ** Note that you need the > in the descriptor or everything will break **
