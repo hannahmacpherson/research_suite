@@ -1,8 +1,8 @@
 import sys
-from utils.utils import trim, trim_2
-from utils.barcode_report import barcode_report
-from utils.primer_finder_trimmer import primer_finder_timmer
-from utils.typing_report_analyser import typing_report_analyser
+from utils.seq_trim.seq_trim import trim_2
+# from utils.barcode_report import barcode_report
+# from utils.primer_finder_trimmer import primer_finder_timmer
+# from utils.typing_report_analyser import typing_report_analyser
 import argparse
 import logging
 
@@ -17,7 +17,8 @@ main_parser = argparse.ArgumentParser(
 subparsers = main_parser.add_subparsers(title="tool_to_use", dest="cur_tool",
                                         help="Choose what analysis tool to use [seq_trim]")
 
-seq_trim_sub = subparsers.add_parser('seq_trim', help="Trim sequence!")
+seq_trim_sub = subparsers.add_parser(
+    'seq_trim', help="Trim sequence, no negative values please!")
 bc_eval_sub = subparsers.add_parser('bc_eval', help="Evaluate barcodes")
 primer_trimmer_sub = subparsers.add_parser('prim_trim', help="Trim primers")
 typing_analyser_sub = subparsers.add_parser(
@@ -49,11 +50,11 @@ args = main_parser.parse_args()
 def main():
     if args.cur_tool == "seq_trim":
         trim_2(args.start, args.end, args.file)
-    elif args.cur_tool = "bc_eval":
+    elif args.cur_tool == "bc_eval":
         barcode_report(args.ampcsv, args.gene, args.polymerase)
-    elif args.cur_tool = "primer_trimmer_sub":
+    elif args.cur_tool == "primer_trimmer_sub":
         primer_finder_timmer()
-    elif args.cur_tool = "typing_report_analyser":
+    elif args.cur_tool == "typing_report_analyser":
         typing_report_analyser()
     else:
         print("Incorrect tool requested!")
